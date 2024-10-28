@@ -78,24 +78,25 @@ WSGI_APPLICATION = 'inventoryproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'inventory',
-#         'USERNAME': 'root',
-#         'HOST': 'localhost',
-#         'PORT': 3306,
-#         'PASSWORD': '',  # Your Password
-#     }
-# }
-
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # Use SQLite as the database backend
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),  # Path to your SQLite database file
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'inventory_vgzi',
+        'USERNAME': 'inventory_vgzi_user',
+        'HOST': 'dpg-csfjhttsvqrc73fftve0-a',
+        'PORT': 5432,
+        'PASSWORD': 'izbgp4YU6s4zSFThxGhrOlyzb6pNEwPi',  # Your Password
+        'Internal Database URL': 'postgresql://inventory_vgzi_user:izbgp4YU6s4zSFThxGhrOlyzb6pNEwPi@dpg-csfjhttsvqrc73fftve0-a/inventory_vgzi',
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',  # Use SQLite as the database backend
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),  # Path to your SQLite database file
+#     }
+# }
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
